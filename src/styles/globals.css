@@ -24,4 +24,58 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.neon-one {
+  text-shadow: 0 0 7px #ff005b;
+  position: relative;
+}
+.neon-one::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  color: #ff005b;
+  filter: blur(15px);
+}
+.neon-one::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  opacity: 0.5;
+  background: #f35086;
+  filter: blur(40px);
+}
+.neon-two {
+  text-shadow: 0 0 7px #63d25f;
+
+  position: relative;
+}
+.neon-two::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  color: #63d25f;
+  filter: blur(15px);
+}
+.neon-two::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  opacity: 0.5;
+  background: #a5fda2;
+  filter: blur(40px);
 }
